@@ -74,3 +74,9 @@
     @include setWidth(2);
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .portofolio__card {
+    @include setWidth(3);
+    }
+}

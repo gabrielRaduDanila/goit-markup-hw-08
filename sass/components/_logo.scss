@@ -5,7 +5,7 @@
     line-height: 1.19;
     color: $black-color;
     font-weight: 700;
-    margin-right: 69px;
+    margin-right: 93px;
 
     &:hover,
     &:focus {
@@ -17,10 +17,4 @@
     @extend .logo;
     color: var(--logo-and-hover-color);
     margin-right: 0;
-}
-
-@media screen and (min-width: 1200px) {
-    .logo {
-        margin: 0;
-    }
 }

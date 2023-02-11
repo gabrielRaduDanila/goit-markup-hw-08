@@ -1,0 +1,65 @@
+.team-members {
+    background-color: var(--our-team-bg);
+
+    .container {
+        @include displayFlex(column);
+        gap: 50px;
+    }
+}
+
+.team-members__title {
+    @extend .what-we-do__title;
+
+}
+
+.team-members__our-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @extend %unstyle-list;
+    max-width: 100%;
+}
+
+.team-members__team-card {
+    background-color: var(--white-color);
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-person-image {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.person-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    color: var(--links-color);
+    margin-bottom: 10px;
+}
+
+.person-job {
+    font-size: 16px;
+    line-height: 1.18;
+    padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .team-members__team-card {
+        @include setWidth(2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .team-members__our-team {
+        flex-wrap: nowrap;
+    }
+
+    .team-members__team-card {
+        @include setWidth(4);
+    }
+}

@@ -1,0 +1,56 @@
+.what-we-do {
+    display: none;
+    background-color: var(--what-we-do-bg);
+    padding-top: 0;
+
+    .container {
+        @include displayFlex(column);
+        gap: 50px;
+    }
+}
+
+.what-we-do__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.16;
+    margin: auto;
+    color: var(--links-color);
+}
+
+.what-we-do__images {
+    @include displayFlex(row);
+    gap: 30px;
+    @extend %unstyle-list;
+}
+
+.what-we-do-card {
+    position: relative;
+}
+
+.what-we-do__image {
+    width: 100%;
+    height: auto;
+}
+
+.what-we-do__text {
+    font-weight: 700;
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2px;
+
+    p {
+        text-transform: uppercase;
+        color: var(--white-color);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .what-we-do {
+        display: block;
+    }
+}

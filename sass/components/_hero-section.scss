@@ -1,0 +1,53 @@
+.hero-section {
+  background-color: var(--hero-bg);
+  padding: 118px 60px;
+  text-align: center;
+  background-image: url('../images/hero-bg/hero-bg-770.png');
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    @include displayFlex(column);
+    gap: 30px;
+  }
+}
+
+.hero-section__title {
+  color: var(--white-color);
+  font-size: 26px;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+  font-weight: 900;
+}
+
+.hero-section__button {
+  background-color: var(--button-color);
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  padding: 10px 20px;
+  width: fit-content;
+  @include bordered(var(--button-color));
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--logo-and-hover-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+  background-image: url('../images/hero-bg/hero-bg-1200.png');
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section {
+  background-image: url('../images/hero-bg/hero-bg-1600.png');
+  }
+}

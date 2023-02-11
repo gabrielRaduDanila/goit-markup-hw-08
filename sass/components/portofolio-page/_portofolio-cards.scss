@@ -1,0 +1,76 @@
+.portofolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @extend %unstyle-list;
+}
+
+.portofolio__card {
+    @include bordered(#EEEEEE);
+    background-color: var(--white-color);
+    flex-basis: 100%;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+
+        .overlay-container {
+            transform: translateY(0);
+        }
+    }
+}
+
+.portofolio__card-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+}
+
+.overlay-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--logo-and-hover-color);
+    transform: translateY(100%);
+    transition: transform var(--transition-duration) var(--transition-timing);
+    background: rgba(33, 150, 243, 0.9);
+    @include displayFlex(column);
+
+    p {
+        color: var(--white-color);
+        padding: 55px 20px;
+    }
+}
+
+.card-text {
+    @include bordered(#EEEEEE);
+    border-top: none;
+    padding: 20px 24px;
+
+    &__name {
+        color: var(--links-color);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 2;
+        margin-bottom: 4px;
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 1.87;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .portofolio__card {
+    @include setWidth(2);
+    }
+}

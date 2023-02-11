@@ -1,0 +1,33 @@
+.portofolio-page {
+    background: var(--what-we-do-bg);
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.filter {
+    @extend %unstyle-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: auto;
+
+    &__item{
+        color: var(--links-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        background-color: #F5F4FA;
+        border: none;
+        padding: 6px 22px;
+        margin-bottom: 7px;
+
+        &:hover,
+        &:focus {
+            background-color: var(--logo-and-hover-color);
+            color: var(--white-color);
+            cursor: pointer;
+        }
+    }
+}

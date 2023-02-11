@@ -1,0 +1,27 @@
+.social-media {
+    @include displayFlex(row);
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.social-media__item {
+    @extend %unstyle-list;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    @include displayFlex(row);
+
+    &:hover,
+    &:focus {
+        background-color: var(--logo-and-hover-color);
+        cursor: pointer;
+
+        .social-icons {
+            fill: var(--white-color);
+        }
+    }
+}
+
+.social-icons {
+    fill: var(--social-media-bottons);
+}

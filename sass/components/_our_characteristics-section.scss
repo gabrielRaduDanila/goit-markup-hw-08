@@ -1,0 +1,43 @@
+.characteristics {
+    background-color: var(--what-we-do-bg);
+}
+
+.characteristics-list {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %unstyle-list;
+    gap: 30px;
+}
+
+.characteristics-list__card {
+    flex-basis: 100%;
+}
+
+.characteristics-list__card-image {
+    @include displayFlex(row);
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--our-team-bg);
+}
+
+.characteristics__description-title {
+    font-weight: 700;
+    color: var(--links-color);
+}
+
+.characteristics__description-text {
+    line-height: 1.71;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .characteristics-list__card {
+        @include setWidth(2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .characteristics-list__card {
+        @include setWidth(4);
+    }
+}
